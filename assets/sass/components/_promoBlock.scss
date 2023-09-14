@@ -44,15 +44,16 @@
     .promo-block__companies-con {
        display: grid; 
        grid-template-columns: repeat(2, 1fr);
+       grid-gap: 1rem;
 
        .card {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 100px;
+        // min-height: 100px;
 
         img {
-            max-width: 10rem;
+            max-width: 8rem;
         }
        }
     }
@@ -380,6 +381,18 @@
         .promo-block--right {
             flex-basis: 50%;
         }
+
+        .promo-block__companies-con {
+            
+            .card {
+    
+                img {
+                    max-width: 10rem;
+                }
+
+            }
+
+         }
 
     }
 }
