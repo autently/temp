@@ -1,0 +1,17 @@
+// Import base styles
+@import './base/reset';
+@import './base/variables';
+@import './base/typography';
+
+// Import components
+@import './components/header';
+@import './components/banner';
+@import './components/sidebar';
+@import './components/hero';
+@import './components/button';
+@import './components/promoBlock';
+@import './components/footer';
+
+// Import layout
+@import './layout/layout.scss';
+@import './layout/header.scss';

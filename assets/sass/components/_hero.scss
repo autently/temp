@@ -1,0 +1,67 @@
+.hero {
+    height: 600px;
+    overflow: hidden;
+
+    ul {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            height: 100%;
+            position: relative;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;    
+            }
+
+            .caption-field {
+                position: absolute;
+                z-index: 3;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .caption-con {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                width: 100%;
+
+                .caption {
+                    // color: #04316a;
+                    // color: #00377d;
+                    color: $headingColor;
+                    font-size: 4.5rem;
+                    max-width: 80rem;
+                    font-weight: 100;
+
+                    b {
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                // background-color: rgba(255, 255, 255, 0.69);
+                background-color: rgba(255, 255, 255, 0.78);
+                z-index: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,413 @@
+.promo-block {
+    padding: 5rem 0;
+    // &--split,
+    // &--big,
+    // &--cards,
+    // &--small-tiles {
+    //     padding: 10rem 0;
+    // }
+
+    &--small-tiles {
+        // background-color: #f9fdff;
+        // background-color: #f0faff;
+        background-color: #f8fafb;
+
+    }
+
+
+}
+
+.promo-block__con--split {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    // max-height: 50rem;
+
+    .promo-block__text-con {
+        margin: 0;
+    }
+
+    .promo-block__img-con {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 2rem;
+
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .promo-block__companies-con {
+       display: grid; 
+       grid-template-columns: repeat(2, 1fr);
+
+       .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100px;
+
+        img {
+            max-width: 10rem;
+        }
+       }
+    }
+
+    .promo-block--right {
+        order: 1;
+    }
+}
+
+.promo-block__text--center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.promo-block__banner {
+    padding: 5rem;
+    border-radius: 2rem;
+
+    background-color: transparent;
+    background-image: linear-gradient(135deg, #deebff, #e6dfff 25%, #fff1fc 70%, #ffe5e5);
+}
+
+.promo-block__text-con {
+    margin-bottom: 5rem;
+
+    p,
+    span {
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: #484848;
+    }
+
+    h2 {
+        color: $headingColor;
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+}
+
+.promo-background {
+    &--blue {
+        background-color: $promoBackgroundColorBlue;
+    }
+
+    &--grey {
+        background-color: $promoBackgroundColorGrey;
+    }
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // border: 1px solid #d6ebf7;
+        border: 1px solid #f2f6f9;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            box-shadow: 0px 0px 14px -3px #dfdfdf;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.tile-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: 0;
+
+    .tile {
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        border-radius: .5rem;
+        background-color: #fff;
+        // border: 1px solid #dfeaf0;
+        border: 1px solid #f2f6f9;
+        transition: all 0.2s ease-in-out;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        &:hover {
+            box-shadow: 0px 0px 14px -3px #dfdfdf;
+        }
+
+        &__title {
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+
+        &__desc {
+            p {
+                margin-bottom: 0;
+                color: gray;
+            }
+        }
+
+        &__body {
+            flex: 1;
+        }
+
+        &__img {
+            order: -1;
+            // flex: 1;
+            height: 10rem;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 5px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+
+    }
+
+    .tile + .tile {
+        // border-left: 1px solid #f0faff;
+        // border-top: 1px solid #f0faff;
+    }
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .card {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            margin: 0;
+        }
+
+        .card__header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            padding: 3rem;
+
+            .card__icon svg {
+                height: 2.3rem;
+                width: 2.3rem;
+                color: $headingColor;
+            }
+
+            .card__title {
+                font-size: 1.8rem;
+                line-height: 2.5rem;
+                font-weight: 500;
+                // color: $headingColor;
+            }
+
+            .card__icon + .card__title {
+                margin-left: 1.5rem;
+            }
+        }
+
+        .card__body {
+            padding: 0 3rem 3rem 3rem;
+            flex: 1;
+        }
+
+        .card__footer {
+            
+            border-top: 1px solid #eff9ff;
+
+            > a,
+            > span,
+            > div {
+                position: relative;
+                display: block;
+                height: 8rem;
+                line-height: 8rem;
+                padding: 0 3rem;
+                text-decoration: none;
+                color: $headingColor;
+
+                &:hover {
+                    background-color: #fdfeff;
+                }
+            }
+
+            a {
+                transition: all 0.2s ease-in-out;
+
+                &:hover::before {
+                    animation: bounce .3s infinite;
+                    animation-direction: alternate;
+                }
+
+                @keyframes bounce {
+                    from {
+                        right: 3rem;
+                    }
+
+                    to {
+                        right: 3.5rem;
+                    }
+                }
+            }
+
+            a::before {
+                content: "\276F";
+                position: absolute;
+                right: 3rem;
+                z-index: 1;
+            }
+        }
+
+        & + .card {
+            // box-shadow: inset 1px 0px 0px 0px #eff9ff;
+            // border-left: 1px solid $promoBackgroundColorBlue;
+            border-top: 1px solid $promoBackgroundColorBlue;
+        }
+
+    }
+
+}
+
+
+@media (min-width: 400px) {
+    .tile-grid {
+        .tile {
+            flex-direction: row;
+
+            &__img {
+                // flex: none;
+                height: 12rem;
+                width: 12rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 550px) {
+
+    .tile-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        .tile {
+            flex-direction: column;
+
+            &__img {
+                width: 100%;
+            }
+        }
+    }
+
+    .support-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .promo-block__con--split .promo-block__companies-con {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+}
+
+@media (min-width: 850px) {
+    .tile-grid {
+        .tile {
+            display: flex;
+            flex-direction: column;
+
+            &__img {
+                max-height: 200px;
+                width: 100%;
+                height: 100%;
+                order: -1;
+                aspect-ratio: 3 / 2;
+            }
+        }
+    }
+
+    .tile-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        .card {
+            & + .card {
+                // box-shadow: inset 1px 0px 0px 0px #eff9ff;
+                border-left: 1px solid $promoBackgroundColorBlue;
+                border-top: none;
+            }
+        }
+    }
+
+    .promo-block {
+        padding: 10rem 0;
+    }
+
+
+    .promo-block__con--split {
+        flex-direction: row;
+
+        .promo-block__text-con,
+        .promo-block__img-con,
+        .promo-block--right {
+            flex-basis: 50%;
+        }
+
+    }
+}
+
+@media (min-width: 900px) {
+    .support-grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .promo-block__banner {
+        min-height: 400px;
+    }
+
+    .promo-block__text-con {
+        margin-bottom: 5rem;
+    
+        p,
+        span {
+            font-size: 1.8rem;
+            line-height: 3rem;
+            font-weight: 300;
+            color: #484848;
+        }
+    
+        h2 {
+            color: $headingColor;
+            font-size: 3rem;
+            font-weight: 300;
+        }
+    }
+}

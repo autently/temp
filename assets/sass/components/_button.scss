@@ -1,0 +1,39 @@
+.cta {
+    display: inline-block;
+    height: 5rem;
+    line-height: 5rem;
+    padding: 0 2rem;
+    // background-color: #04729d;
+    // background-color: #04559d;
+    // background-color: #04409d;
+    background-color: $ctaBaseColor;
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.07rem;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: #024f7d;
+    }
+
+    & + .cta {
+        margin-left: 1rem;
+    }
+}
+
+div[data-encrypted-btn-active] {
+    div {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        svg {
+            position: absolute;
+            right: 0;
+        }
+    }
+}
